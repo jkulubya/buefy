@@ -387,6 +387,29 @@ export default defineComponent({
         [TableMobileSort.name]: TableMobileSort,
         [TableColumn.name]: TableColumn
     },
+    emits: [
+        'click',
+        'dblClick',
+        'sort',
+        'sorting-priority-removed',
+        'select',
+        'check',
+        'check-all',
+        'page-change',
+        'details-open',
+        'details-closed',
+        'contextmenu',
+        'dragstart',
+        'dragend',
+        'drop',
+        'dragover',
+        'dragleave',
+        'mouseenter',
+        'mouseleave',
+        'filters-change',
+        'update:selected',
+        'visible-data-changed'
+    ],
     props: {
         data: {
             type: Array,
@@ -706,6 +729,10 @@ export default defineComponent({
             if (!this.backendPagination) {
                 this.newDataTotal = this.newData.length
             }
+        },
+
+        visibleData(value) {
+            this.$emit('visible-data-changed', value)
         },
 
         /**
