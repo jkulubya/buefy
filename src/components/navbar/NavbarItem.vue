@@ -12,9 +12,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 const clickableWhiteList = ['div', 'span']
 
-export default {
+export default defineComponent({
     name: 'BNavbarItem',
     inheritAttrs: false,
     props: {
@@ -73,5 +74,5 @@ export default {
             document.removeEventListener('keyup', this.keyPress)
         }
     }
-}
+})
 </script>

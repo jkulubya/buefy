@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BCollapse',
     props: {
         open: {
@@ -65,5 +66,5 @@ export default {
         return createElement('div', { staticClass: 'collapse' },
             this.position === 'is-top' ? [trigger, content] : [content, trigger])
     }
-}
+})
 </script>

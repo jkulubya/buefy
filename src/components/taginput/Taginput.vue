@@ -84,13 +84,14 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import { getValueByPath } from '../../utils/helpers'
 import Tag from '../tag/Tag'
 import Autocomplete from '../autocomplete/Autocomplete'
 import config from '../../utils/config'
 import FormElementMixin from '../../utils/FormElementMixin'
 
-export default {
+export default defineComponent({
     name: 'BTaginput',
     components: {
         [Autocomplete.name]: Autocomplete,
@@ -356,5 +357,5 @@ export default {
             this.$emit('infinite-scroll')
         }
     }
-}
+})
 </script>

@@ -43,7 +43,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BDatepickerTableRow',
     props: {
         selectedDate: {
@@ -303,5 +304,5 @@ export default {
             this.$emit('change-focus', nextDay)
         }
     }
-}
+})
 </script>

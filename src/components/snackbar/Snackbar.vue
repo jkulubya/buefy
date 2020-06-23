@@ -20,10 +20,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 import NoticeMixin from '../../utils/NoticeMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BSnackbar',
     mixins: [NoticeMixin],
     props: {
@@ -55,5 +56,5 @@ export default {
             this.close()
         }
     }
-}
+})
 </script>

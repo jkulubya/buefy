@@ -52,7 +52,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BTag',
     props: {
         attached: Boolean,
@@ -83,5 +84,5 @@ export default {
             this.$emit('close', event)
         }
     }
-}
+})
 </script>

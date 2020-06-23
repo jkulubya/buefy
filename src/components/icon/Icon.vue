@@ -14,10 +14,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 import getIcons from '../../utils/icons'
 
-export default {
+export default defineComponent({
     name: 'BIcon',
     props: {
         type: [String, Object],
@@ -105,5 +106,5 @@ export default {
             return value
         }
     }
-}
+})
 </script>

@@ -4,9 +4,9 @@ import StepItem from './StepItem'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Steps)
-        registerComponent(Vue, StepItem)
+    install(app) {
+        registerComponent(app, Steps)
+        registerComponent(app, StepItem)
     }
 }
 

@@ -1,4 +1,4 @@
-import _Vue from "vue";
+import { App } from "vue";
 
 import {
     BuefyConfig,
@@ -10,12 +10,12 @@ import {
     NotificationProgrammatic,
     ConfigProgrammatic } from "./components";
 
-// Adds Buefy method signatures to Vue instance (ie this.$buefy.dialog)
-declare module 'vue/types/vue' {
-    interface Vue {
-        $buefy: BuefyNamespace
-    }
-}
+// // Adds Buefy method signatures to Vue instance (ie this.$buefy.dialog)
+// declare module 'vue/types/vue' {
+//     interface Vue {
+//         $buefy: BuefyNamespace
+//     }
+// }
 
 export declare type BuefyNamespace = {
     dialog: typeof DialogProgrammatic,
@@ -28,7 +28,7 @@ export declare type BuefyNamespace = {
 }
 
 declare const _default: {
-    install(Vue: typeof _Vue, config: BuefyConfig): void;
+    install(app: App, ...options: any[]): any;
 };
 
 export {

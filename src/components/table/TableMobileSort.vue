@@ -6,8 +6,7 @@
                 expanded
                 v-if="sortMultiple">
                 <option
-                    v-for="(column, index) in columns"
-                    v-if="column.sortable"
+                    v-for="(column, index) in sortableColumns"
                     :key="index"
                     :value="column">
                     {{ getLabel(column) }}
@@ -36,8 +35,7 @@
                     </option>
                 </template>
                 <option
-                    v-for="(column, index) in columns"
-                    v-if="column.sortable"
+                    v-for="(column, index) in sortableColumns"
                     :key="index"
                     :value="column">
                     {{ column.label }}
@@ -86,10 +84,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Select from '../select/Select'
 import Icon from '../icon/Icon'
 
-export default {
+export default defineComponent({
     name: 'BTableMobileSort',
     components: {
         [Select.name]: Select,
@@ -128,6 +127,9 @@ export default {
         }
     },
     computed: {
+        sortableColumns() {
+            return this.columns.filter((col) => col.sortable)
+        },
         showPlaceholder() {
             return !this.columns || !this.columns.some((column) => column === this.mobileSort)
         }
@@ -185,5 +187,5 @@ export default {
             this.$emit('sort', (this.sortMultiple ? this.sortMultipleSelect : this.mobileSort), this.defaultEvent)
         }
     }
-}
+})
 </script>

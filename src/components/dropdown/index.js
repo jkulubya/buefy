@@ -4,9 +4,9 @@ import DropdownItem from './DropdownItem'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Dropdown)
-        registerComponent(Vue, DropdownItem)
+    install(app) {
+        registerComponent(app, Dropdown)
+        registerComponent(app, DropdownItem)
     }
 }
 

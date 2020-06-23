@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BFieldBody',
     props: {
         message: {
@@ -24,5 +25,5 @@ export default {
             return createElement('b-field', { attrs: { type: this.type, message } }, [element])
         }))
     }
-}
+})
 </script>

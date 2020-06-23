@@ -59,11 +59,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Icon from '../icon/Icon'
 import config from '../../utils/config'
 import FormElementMixin from '../../utils/FormElementMixin'
 
-export default {
+export default defineComponent({
     name: 'BInput',
     components: {
         [Icon.name]: Icon
@@ -249,5 +250,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

@@ -35,9 +35,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import clickOutside from '../../directives/clickOutside'
 
-export default {
+export default defineComponent({
     name: 'BNavbarDropdown',
     directives: {
         clickOutside
@@ -87,5 +88,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

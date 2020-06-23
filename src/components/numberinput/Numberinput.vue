@@ -68,11 +68,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Icon from '../icon/Icon'
 import Input from '../input/Input'
 import FormElementMixin from '../../utils/FormElementMixin'
 
-export default {
+export default defineComponent({
     name: 'BNumberinput',
     components: {
         [Icon.name]: Icon,
@@ -217,5 +218,5 @@ export default {
             this._$intervalRef = null
         }
     }
-}
+})
 </script>

@@ -81,11 +81,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 
 import Icon from '../icon/Icon'
 
-export default {
+export default defineComponent({
     name: 'BCarousel',
     components: {
         [Icon.name]: Icon
@@ -345,5 +346,5 @@ export default {
     beforeDestroy() {
         this.pauseTimer()
     }
-}
+})
 </script>

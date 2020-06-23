@@ -3,8 +3,8 @@ import Input from './Input'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Input)
+    install(app) {
+        registerComponent(app, Input)
     }
 }
 

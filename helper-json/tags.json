@@ -32,6 +32,11 @@
       "loading",
       "rounded",
       "outlined",
+      "focused",
+      "inverted",
+      "hovered",
+      "active",
+      "selected",
       "expanded",
       "icon-left",
       "icon-right",
@@ -886,7 +891,10 @@
       "ellipsis",
       "tabstop",
       "disabled",
-      "aria-close-label"
+      "aria-close-label",
+      "close-icon",
+      "close-icon-pack",
+      "close-icon-type"
     ],
     "description": "Buefy component <b-tag>",
     "subtags": [
@@ -907,6 +915,7 @@
       "maxtags",
       "has-counter",
       "type",
+      "closeType",
       "size",
       "rounded",
       "attached",

@@ -27,8 +27,9 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Tooltip from '../tooltip/Tooltip'
-export default {
+export default defineComponent({
     name: 'BSliderThumb',
     components: {
         [Tooltip.name]: Tooltip
@@ -184,5 +185,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

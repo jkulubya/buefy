@@ -24,9 +24,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import CheckRadioMixin from '../../utils/CheckRadioMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BCheckbox',
     mixins: [CheckRadioMixin],
     props: {
@@ -40,5 +41,5 @@ export default {
             default: false
         }
     }
-}
+})
 </script>

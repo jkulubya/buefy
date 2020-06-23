@@ -47,7 +47,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BDatepickerMonth',
     props: {
         value: {
@@ -264,5 +265,5 @@ export default {
             this.$emit('change-focus', nextMonth)
         }
     }
-}
+})
 </script>

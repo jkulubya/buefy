@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BStepItem',
     props: {
         step: [String, Number],
@@ -83,5 +84,5 @@ export default {
         }
         return vnode
     }
-}
+})
 </script>

@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent, h } from 'vue'
+export default defineComponent({
     name: 'BSkeleton',
     functional: true,
     props: {
@@ -24,13 +25,13 @@ export default {
         },
         size: String
     },
-    render(createElement, context) {
+    render(context) {
         if (!context.props.active) return
         const items = []
         const width = context.props.width
         const height = context.props.height
         for (let i = 0; i < context.props.count; i++) {
-            items.push(createElement('div', {
+            items.push(h('div', {
                 staticClass: 'b-skeleton-item',
                 class: { 'is-rounded': context.props.rounded },
                 key: i,
@@ -43,10 +44,10 @@ export default {
                 }
             }))
         }
-        return createElement('div', {
+        return h('div', {
             staticClass: 'b-skeleton',
             class: [ context.props.size, { 'is-animated': context.props.animated } ]
         }, items)
     }
-}
+})
 </script>

@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BTabItem',
     props: {
         label: String,
@@ -78,5 +79,5 @@ export default {
         }
         return vnode
     }
-}
+})
 </script>

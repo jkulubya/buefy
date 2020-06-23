@@ -15,9 +15,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 
-export default {
+export default defineComponent({
     name: 'BTooltip',
     props: {
         active: {
@@ -60,5 +61,5 @@ export default {
             return this.delay || config.defaultTooltipDelay
         }
     }
-}
+})
 </script>

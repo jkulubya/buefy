@@ -4,9 +4,9 @@ import PaginationButton from './PaginationButton'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Pagination)
-        registerComponent(Vue, PaginationButton)
+    install(app) {
+        registerComponent(app, Pagination)
+        registerComponent(app, PaginationButton)
     }
 }
 

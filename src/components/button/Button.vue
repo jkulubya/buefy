@@ -37,10 +37,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Icon from '../icon/Icon'
 import config from '../../utils/config'
 
-export default {
+export default defineComponent({
     name: 'BButton',
     components: {
         [Icon.name]: Icon
@@ -102,5 +103,5 @@ export default {
             return this.size
         }
     }
-}
+})
 </script>

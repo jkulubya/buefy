@@ -3,8 +3,8 @@ import Clockpicker from './Clockpicker'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Clockpicker)
+    install(app) {
+        registerComponent(app, Clockpicker)
     }
 }
 

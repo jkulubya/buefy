@@ -3,8 +3,8 @@ import Timepicker from './Timepicker'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Timepicker)
+    install(app) {
+        registerComponent(app, Timepicker)
     }
 }
 

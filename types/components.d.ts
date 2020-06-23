@@ -1,8 +1,8 @@
-import _Vue from "vue";
+import { Component } from "vue";
 import { ColorModifiers, GlobalPositions } from "./helpers";
 
 // Component base definition
-export class BComponent extends _Vue {
+export class BComponent {
     // Simple catch-all to allow any prop/type
     [key: string]: any
 }
@@ -214,12 +214,12 @@ declare type BModalConfig = {
     /**
      * Component to be injected, used to open a component modal programmatically
      */
-    component?: typeof _Vue;
+    component?: Component;
 
     /**
      * Parent component of the modal, required if using component
      */
-    parent?: _Vue;
+    parent?: Component;
 
     /**
      * Props to be binded to the injected component

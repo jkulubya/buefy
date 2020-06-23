@@ -1,4 +1,5 @@
 <script>
+import { defineComponent } from 'vue'
 import NavbarBurger from './NavbarBurger.vue'
 import clickOutside from '../../directives/clickOutside'
 
@@ -11,7 +12,7 @@ const BODY_SPACED_FIXED_BOTTOM_CLASS = 'has-spaced-navbar-fixed-bottom'
 
 const isFilled = (str) => !!str
 
-export default {
+export default defineComponent({
     name: 'BNavbar',
     components: {
         NavbarBurger
@@ -226,5 +227,5 @@ export default {
     render(createElement, fn) {
         return this.genNavbar(createElement)
     }
-}
+})
 </script>

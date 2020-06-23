@@ -4,9 +4,9 @@ import TabItem from './TabItem'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Tabs)
-        registerComponent(Vue, TabItem)
+    install(app) {
+        registerComponent(app, Tabs)
+        registerComponent(app, TabItem)
     }
 }
 

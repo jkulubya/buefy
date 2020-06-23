@@ -13,10 +13,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import { removeElement } from '../../utils/helpers'
 import { HTMLElement } from '../../utils/ssr'
 
-export default {
+export default defineComponent({
     name: 'BLoading',
     props: {
         active: Boolean,
@@ -113,5 +114,5 @@ export default {
             document.removeEventListener('keyup', this.keyPress)
         }
     }
-}
+})
 </script>

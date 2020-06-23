@@ -23,10 +23,10 @@ const LoadingProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponent(Vue, Loading)
-        registerComponentProgrammatic(Vue, 'loading', LoadingProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponent(app, Loading)
+        registerComponentProgrammatic(app, 'loading', LoadingProgrammatic)
     }
 }
 

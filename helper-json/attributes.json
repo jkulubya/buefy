@@ -103,6 +103,26 @@
     "description": "Outlined style",
     "type": "boolean"
   },
+  "b-button/focused": {
+    "description": "Focused style",
+    "type": "boolean"
+  },
+  "b-button/inverted": {
+    "description": "Inverted style",
+    "type": "boolean"
+  },
+  "b-button/hovered": {
+    "description": "Hovered style",
+    "type": "boolean"
+  },
+  "b-button/active": {
+    "description": "Active style",
+    "type": "boolean"
+  },
+  "b-button/selected": {
+    "description": "Selected style",
+    "type": "boolean"
+  },
   "b-button/expanded": {
     "description": "Button will be expanded (full-width)",
     "type": "boolean"
@@ -2348,7 +2368,7 @@
     "type": "string"
   },
   "b-tag/size": {
-    "description": "Size of the tab, optional",
+    "description": "Size of the tag, optional",
     "type": "string"
   },
   "b-tag/rounded": {
@@ -2379,8 +2399,20 @@
     "description": "Accessibility label for the close button",
     "type": "string"
   },
+  "b-tag/close-icon": {
+    "description": "Replace times in close button with a customized icon. closable and attached props should be needed.",
+    "type": "string"
+  },
+  "b-tag/close-icon-pack": {
+    "description": "Icon pack to use",
+    "type": "string"
+  },
+  "b-tag/close-icon-type": {
+    "description": "Type (color) of the close icon of tag, optional",
+    "type": "string"
+  },
   "b-tag-taglist/attached": {
-    "description": "Tabs inside are attached together",
+    "description": "Tags inside are attached together",
     "type": "boolean"
   },
   "b-taginput/value": {
@@ -2401,6 +2433,10 @@
   },
   "b-taginput/type": {
     "description": "Type (color) of the tags, optional",
+    "type": "string"
+  },
+  "b-taginput/closeType": {
+    "description": "Type (color) of the close icon, optional",
     "type": "string"
   },
   "b-taginput/size": {

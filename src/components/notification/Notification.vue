@@ -33,9 +33,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import MessageMixin from '../../utils/MessageMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BNotification',
     mixins: [MessageMixin],
     props: {
@@ -46,5 +47,5 @@ export default {
             default: 'fade'
         }
     }
-}
+})
 </script>

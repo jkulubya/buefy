@@ -26,11 +26,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 // These should match the variables in clockpicker.scss
 const indicatorSize = 40
 const paddingInner = 5
 
-export default {
+export default defineComponent({
     name: 'BClockpickerFace',
     props: {
         pickerSize: Number,
@@ -246,5 +247,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

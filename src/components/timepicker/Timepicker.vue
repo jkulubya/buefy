@@ -125,6 +125,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import TimepickerMixin from '../../utils/TimepickerMixin'
 import Dropdown from '../dropdown/Dropdown'
 import DropdownItem from '../dropdown/DropdownItem'
@@ -133,7 +134,7 @@ import Field from '../field/Field'
 import Select from '../select/Select'
 import Icon from '../icon/Icon'
 
-export default {
+export default defineComponent({
     name: 'BTimepicker',
     components: {
         [Input.name]: Input,
@@ -155,5 +156,5 @@ export default {
             if (this.enableSeconds) return '1'
         }
     }
-}
+})
 </script>

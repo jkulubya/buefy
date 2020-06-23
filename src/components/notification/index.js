@@ -36,10 +36,10 @@ const NotificationProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponent(Vue, Notification)
-        registerComponentProgrammatic(Vue, 'notification', NotificationProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponent(app, Notification)
+        registerComponentProgrammatic(app, 'notification', NotificationProgrammatic)
     }
 }
 

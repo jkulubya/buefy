@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent, h } from 'vue'
+export default defineComponent({
     name: 'BMenuList',
     functional: true,
     props: {
@@ -11,27 +12,27 @@ export default {
             default: ''
         }
     },
-    render(createElement, context) {
+    render(context) {
         let vlabel = null
         const slots = context.slots()
         if (context.props.label || slots.label) {
-            vlabel = createElement('p', { attrs: { 'class': 'menu-label' } },
+            vlabel = h('p', { attrs: { 'class': 'menu-label' } },
                 context.props.label
                     ? context.props.icon
                         ? [
-                            createElement('b-icon', {
+                            h('b-icon', {
                                 props: {
                                     'icon': context.props.icon,
                                     'pack': context.props.iconPack,
                                     'size': 'is-small'
                                 }
                             }),
-                            createElement('span', {}, context.props.label)
+                            h('span', {}, context.props.label)
                         ] : context.props.label
                     : slots.label)
         }
-        const vnode = createElement('ul', { attrs: { 'class': 'menu-list', 'role': context.props.ariaRole === 'menu' ? context.props.ariaRole : null } }, slots.default)
+        const vnode = h('ul', { attrs: { 'class': 'menu-list', 'role': context.props.ariaRole === 'menu' ? context.props.ariaRole : null } }, slots.default)
         return vlabel ? [ vlabel, vnode ] : vnode
     }
-}
+})
 </script>

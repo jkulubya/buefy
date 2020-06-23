@@ -34,9 +34,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import MessageMixin from '../../utils/MessageMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BMessage',
     mixins: [MessageMixin],
     props: {
@@ -47,5 +48,5 @@ export default {
             newIconSize: this.iconSize || this.size || 'is-large'
         }
     }
-}
+})
 </script>

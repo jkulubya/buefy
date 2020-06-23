@@ -33,11 +33,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 import Icon from '../icon/Icon'
 import SlotComponent from '../../utils/SlotComponent'
 
-export default {
+export default defineComponent({
     name: 'BTabs',
     components: {
         [Icon.name]: Icon,
@@ -188,5 +189,5 @@ export default {
         }
         this.refreshSlots()
     }
-}
+})
 </script>

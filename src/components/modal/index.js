@@ -35,10 +35,10 @@ const ModalProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponent(Vue, Modal)
-        registerComponentProgrammatic(Vue, 'modal', ModalProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponent(app, Modal)
+        registerComponentProgrammatic(app, 'modal', ModalProgrammatic)
     }
 }
 

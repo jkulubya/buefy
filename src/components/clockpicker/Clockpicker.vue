@@ -128,6 +128,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import TimepickerMixin from '../../utils/TimepickerMixin'
 import config from '../../utils/config'
 
@@ -141,7 +142,7 @@ import ClockpickerFace from './ClockpickerFace'
 
 const outerPadding = 12
 
-export default {
+export default defineComponent({
     name: 'BClockpicker',
     components: {
         [ClockpickerFace.name]: ClockpickerFace,
@@ -244,5 +245,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

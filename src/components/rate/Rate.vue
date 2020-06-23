@@ -35,8 +35,9 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Icon from '../icon/Icon'
-export default {
+export default defineComponent({
     name: 'BRate',
     components: {
         [Icon.name]: Icon
@@ -126,5 +127,5 @@ export default {
             return output
         }
     }
-}
+})
 </script>

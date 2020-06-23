@@ -3,8 +3,8 @@ import Datepicker from './Datepicker'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Datepicker)
+    install(app) {
+        registerComponent(app, Datepicker)
     }
 }
 

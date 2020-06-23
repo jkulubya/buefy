@@ -5,10 +5,10 @@ import CarouselList from './CarouselList'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Carousel)
-        registerComponent(Vue, CarouselItem)
-        registerComponent(Vue, CarouselList)
+    install(app) {
+        registerComponent(app, Carousel)
+        registerComponent(app, CarouselItem)
+        registerComponent(app, CarouselList)
     }
 }
 

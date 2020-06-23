@@ -64,13 +64,14 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import trapFocus from '../../directives/trapFocus'
 import Icon from '../icon/Icon'
 import Modal from '../modal/Modal'
 import config from '../../utils/config'
 import { removeElement } from '../../utils/helpers'
 
-export default {
+export default defineComponent({
     name: 'BDialog',
     components: {
         [Icon.name]: Icon
@@ -240,5 +241,5 @@ export default {
             }
         })
     }
-}
+})
 </script>

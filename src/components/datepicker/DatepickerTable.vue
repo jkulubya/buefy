@@ -41,11 +41,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import DatepickerTableRow from './DatepickerTableRow'
 
 const isDefined = (d) => d !== undefined
 
-export default {
+export default defineComponent({
     name: 'BDatepickerTable',
     components: {
         [DatepickerTableRow.name]: DatepickerTableRow
@@ -359,5 +360,5 @@ export default {
             this.$emit('update:focused', focused)
         }
     }
-}
+})
 </script>

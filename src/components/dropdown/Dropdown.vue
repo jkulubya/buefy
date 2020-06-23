@@ -43,13 +43,14 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import trapFocus from '../../directives/trapFocus'
 import config from '../../utils/config'
 import { removeElement, createAbsoluteElement, isCustomElement } from '../../utils/helpers'
 
 const DEFAULT_CLOSE_OPTIONS = ['escape', 'outside']
 
-export default {
+export default defineComponent({
     name: 'BDropdown',
     directives: {
         trapFocus
@@ -360,5 +361,5 @@ export default {
             removeElement(this.$data._bodyEl)
         }
     }
-}
+})
 </script>

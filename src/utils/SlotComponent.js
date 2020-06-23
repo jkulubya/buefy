@@ -1,4 +1,5 @@
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BSlotComponent',
     props: {
         component: {
@@ -49,4 +50,4 @@ export default {
                     : this.component.$slots[this.name])
         }
     }
-}
+})

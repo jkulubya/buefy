@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import FormElementMixin from '../../utils/FormElementMixin'
 import { isMobile } from '../../utils/helpers'
 import config from '../../utils/config'
@@ -88,7 +89,7 @@ import config from '../../utils/config'
 import Datepicker from '../datepicker/Datepicker'
 import Timepicker from '../timepicker/Timepicker'
 
-export default {
+export default defineComponent({
     name: 'BDatetimepicker',
     components: {
         [Datepicker.name]: Datepicker,
@@ -336,5 +337,5 @@ export default {
             }
         }
     }
-}
+})
 </script>

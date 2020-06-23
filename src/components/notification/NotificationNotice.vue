@@ -5,10 +5,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 import NoticeMixin from '../../utils/NoticeMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BNotificationNotice',
     mixins: [NoticeMixin],
     props: {
@@ -22,5 +23,5 @@ export default {
             newDuration: this.duration || config.defaultNotificationDuration
         }
     }
-}
+})
 </script>

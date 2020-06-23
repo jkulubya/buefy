@@ -44,10 +44,10 @@ const DialogProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponent(Vue, Dialog)
-        registerComponentProgrammatic(Vue, 'dialog', DialogProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponent(app, Dialog)
+        registerComponentProgrammatic(app, 'dialog', DialogProgrammatic)
     }
 }
 

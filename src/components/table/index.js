@@ -4,9 +4,9 @@ import TableColumn from './TableColumn'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Table)
-        registerComponent(Vue, TableColumn)
+    install(app) {
+        registerComponent(app, Table)
+        registerComponent(app, TableColumn)
     }
 }
 

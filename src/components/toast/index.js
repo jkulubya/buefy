@@ -35,9 +35,9 @@ const ToastProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponentProgrammatic(Vue, 'toast', ToastProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponentProgrammatic(app, 'toast', ToastProgrammatic)
     }
 }
 

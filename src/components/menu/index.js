@@ -5,10 +5,10 @@ import MenuItem from './MenuItem'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Menu)
-        registerComponent(Vue, MenuList)
-        registerComponent(Vue, MenuItem)
+    install(app) {
+        registerComponent(app, Menu)
+        registerComponent(app, MenuList)
+        registerComponent(app, MenuItem)
     }
 }
 

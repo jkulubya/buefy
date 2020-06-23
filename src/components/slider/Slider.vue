@@ -52,10 +52,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import SliderThumb from './SliderThumb'
 import SliderTick from './SliderTick'
 
-export default {
+export default defineComponent({
     name: 'BSlider',
     components: {
         [SliderThumb.name]: SliderThumb,
@@ -275,5 +276,5 @@ export default {
         this.isTrackClickDisabled = false
         this.setValues(this.value)
     }
-}
+})
 </script>

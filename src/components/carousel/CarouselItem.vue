@@ -7,7 +7,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BCarouselItem',
     data() {
         return {
@@ -48,5 +49,5 @@ export default {
             this.$parent.carouselItems.splice(index, 1)
         }
     }
-}
+})
 </script>

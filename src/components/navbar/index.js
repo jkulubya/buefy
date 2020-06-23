@@ -5,10 +5,10 @@ import NavbarDropdown from './NavbarDropdown'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Navbar)
-        registerComponent(Vue, NavbarItem)
-        registerComponent(Vue, NavbarDropdown)
+    install(app) {
+        registerComponent(app, Navbar)
+        registerComponent(app, NavbarItem)
+        registerComponent(app, NavbarDropdown)
     }
 }
 

@@ -20,7 +20,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BDropdownItem',
     props: {
         value: {
@@ -90,5 +91,5 @@ export default {
             throw new Error('You should wrap bDropdownItem on a bDropdown')
         }
     }
-}
+})
 </script>

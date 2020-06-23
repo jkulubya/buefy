@@ -7,16 +7,16 @@ import { use, registerComponentProgrammatic } from './utils/plugins'
 import ConfigComponent from './utils/ConfigComponent'
 
 const Buefy = {
-    install(Vue, options = {}) {
-        setVueInstance(Vue)
+    install(app, options = {}) {
+        setVueInstance(app)
         // Options
         setOptions(merge(config, options, true))
         // Components
         for (let componentKey in components) {
-            Vue.use(components[componentKey])
+            app.use(components[componentKey])
         }
         // Config component
-        registerComponentProgrammatic(Vue, 'config', ConfigComponent)
+        registerComponentProgrammatic(app, 'config', ConfigComponent)
     }
 }
 

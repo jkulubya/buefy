@@ -49,10 +49,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import config from '../../utils/config'
 import FieldBody from './FieldBody'
 
-export default {
+export default defineComponent({
     name: 'BField',
     components: {
         [FieldBody.name]: FieldBody
@@ -219,6 +220,6 @@ export default {
             }
         }
     }
-}
+})
 
 </script>

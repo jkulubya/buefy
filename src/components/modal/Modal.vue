@@ -41,11 +41,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import trapFocus from '../../directives/trapFocus'
 import { removeElement } from '../../utils/helpers'
 import config from '../../utils/config'
 
-export default {
+export default defineComponent({
     name: 'BModal',
     directives: {
         trapFocus
@@ -275,5 +276,5 @@ export default {
             document.body.style.top = null
         }
     }
-}
+})
 </script>

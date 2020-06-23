@@ -32,7 +32,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BSwitch',
     props: {
         value: [String, Number, Boolean, Function, Object, Array, Date],
@@ -101,5 +102,5 @@ export default {
             this.$refs.input.focus()
         }
     }
-}
+})
 </script>

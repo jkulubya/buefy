@@ -3,8 +3,8 @@ import Skeleton from './Skeleton'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Skeleton)
+    install(app) {
+        registerComponent(app, Skeleton)
     }
 }
 

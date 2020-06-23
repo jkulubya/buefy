@@ -38,10 +38,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import Icon from '../icon/Icon'
 import FormElementMixin from '../../utils/FormElementMixin'
 
-export default {
+export default defineComponent({
     name: 'BSelect',
     components: {
         [Icon.name]: Icon
@@ -95,5 +96,5 @@ export default {
             !this.isValid && this.checkHtml5Validity()
         }
     }
-}
+})
 </script>

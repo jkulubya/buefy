@@ -3,8 +3,8 @@ import Progress from './Progress'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Progress)
+    install(app) {
+        registerComponent(app, Progress)
     }
 }
 

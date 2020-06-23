@@ -4,9 +4,9 @@ import RadioButton from './RadioButton'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Radio)
-        registerComponent(Vue, RadioButton)
+    install(app) {
+        registerComponent(app, Radio)
+        registerComponent(app, RadioButton)
     }
 }
 

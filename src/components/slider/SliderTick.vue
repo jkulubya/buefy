@@ -10,7 +10,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BSliderTick',
     props: {
         value: {
@@ -39,5 +40,5 @@ export default {
             throw new Error('You should wrap bSliderTick on a bSlider')
         }
     }
-}
+})
 </script>

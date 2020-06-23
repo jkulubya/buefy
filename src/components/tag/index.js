@@ -4,9 +4,9 @@ import Taglist from './Taglist'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Tag)
-        registerComponent(Vue, Taglist)
+    install(app) {
+        registerComponent(app, Tag)
+        registerComponent(app, Taglist)
     }
 }
 

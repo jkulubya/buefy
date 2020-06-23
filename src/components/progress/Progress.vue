@@ -13,8 +13,9 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
     name: 'BProgress',
     props: {
         type: {
@@ -104,5 +105,5 @@ export default {
             return fixed
         }
     }
-}
+})
 </script>

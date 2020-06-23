@@ -3,8 +3,8 @@ import Button from './Button'
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
-    install(Vue) {
-        registerComponent(Vue, Button)
+    install(app) {
+        registerComponent(app, Button)
     }
 }
 

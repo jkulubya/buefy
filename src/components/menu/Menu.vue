@@ -5,7 +5,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'BMenu',
     props: {
         accordion: {
@@ -22,5 +23,5 @@ export default {
             _isMenu: true // Used by MenuItem
         }
     }
-}
+})
 </script>

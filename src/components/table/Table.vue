@@ -85,7 +85,7 @@
                                     'is-numeric': column.numeric,
                                     'is-centered': column.centered
                             }">
-                                <template v-if="column.$scopedSlots && column.$scopedSlots.header">
+                                <template v-if="column.$slots && column.$slots.header">
                                     <b-slot-component
                                         :component="column"
                                         :scoped="true"
@@ -94,7 +94,7 @@
                                         :props="{ column, index }"
                                     />
                                 </template>
-                                <template v-else-if="$scopedSlots.header">
+                                <template v-else-if="$slots.header">
                                     <slot
                                         name="header"
                                         :column="column"
@@ -164,7 +164,7 @@
                                     'is-centered': column.centered
                             }">
                                 <template
-                                    v-if="column.$scopedSlots && column.$scopedSlots.subheading"
+                                    v-if="column.$slots && column.$slots.subheading"
                                 >
                                     <b-slot-component
                                         :component="column"
@@ -174,7 +174,7 @@
                                         :props="{ column, index }"
                                     />
                                 </template>
-                                <template v-else-if="$scopedSlots.subheading">
+                                <template v-else-if="$slots.subheading">
                                     <slot
                                         name="subheading"
                                         :column="column"
@@ -198,8 +198,8 @@
                             <div class="th-wrap">
                                 <template v-if="column.searchable">
                                     <template
-                                        v-if="column.$scopedSlots
-                                        && column.$scopedSlots.searchable">
+                                        v-if="column.$slots
+                                        && column.$slots.searchable">
                                         <b-slot-component
                                             :component="column"
                                             :scoped="true"
@@ -229,8 +229,8 @@
                             }]"
                             @click="selectRow(row)"
                             @dblclick="$emit('dblclick', row)"
-                            @mouseenter="$listeners.mouseenter ? $emit('mouseenter', row) : null"
-                            @mouseleave="$listeners.mouseleave ? $emit('mouseleave', row) : null"
+                            @mouseenter="$attrs.mouseenter ? $emit('mouseenter', row) : null"
+                            @mouseleave="$attrs.mouseleave ? $emit('mouseleave', row) : null"
                             @contextmenu="$emit('contextmenu', row, $event)"
                             :draggable="draggable"
                             @dragstart="handleDragStart($event, row, index)"
@@ -266,7 +266,7 @@
                             </td>
 
                             <slot
-                                v-if="$scopedSlots.default"
+                                v-if="$slots.default"
                                 :row="row"
                                 :index="index"
                             />
@@ -366,6 +366,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import { getValueByPath, indexOf, multiColumnSort } from '../../utils/helpers'
 import Checkbox from '../checkbox/Checkbox'
 import Icon from '../icon/Icon'
@@ -375,7 +376,7 @@ import SlotComponent from '../../utils/SlotComponent'
 import TableMobileSort from './TableMobileSort'
 import TableColumn from './TableColumn'
 
-export default {
+export default defineComponent({
     name: 'BTable',
     components: {
         [Checkbox.name]: Checkbox,
@@ -649,9 +650,9 @@ export default {
         * Check if has any column using subheading.
         */
         hasCustomSubheadings() {
-            if (this.$scopedSlots && this.$scopedSlots.subheading) return true
+            if (this.$slots && this.$slots.subheading) return true
             return this.newColumns.some((column) => {
-                return column.subheading || (column.$scopedSlots && column.$scopedSlots.subheading)
+                return column.subheading || (column.$slots && column.$slots.subheading)
             })
         },
 
@@ -1256,5 +1257,5 @@ export default {
         this.newData = []
         this.newColumns = []
     }
-}
+})
 </script>

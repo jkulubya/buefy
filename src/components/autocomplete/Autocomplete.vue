@@ -80,11 +80,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import { getValueByPath, removeElement, createAbsoluteElement, isCustomElement } from '../../utils/helpers'
 import FormElementMixin from '../../utils/FormElementMixin'
 import Input from '../input/Input'
 
-export default {
+export default defineComponent({
     name: 'BAutocomplete',
     components: {
         [Input.name]: Input
@@ -541,5 +542,5 @@ export default {
             removeElement(this.$data._bodyEl)
         }
     }
-}
+})
 </script>

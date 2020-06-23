@@ -20,9 +20,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import { removeElement, isCustomElement } from '../../utils/helpers'
 
-export default {
+export default defineComponent({
     name: 'BSidebar',
     props: {
         open: Boolean,
@@ -206,5 +207,5 @@ export default {
             removeElement(this.$el)
         }
     }
-}
+})
 </script>

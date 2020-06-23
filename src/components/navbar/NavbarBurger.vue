@@ -14,7 +14,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
     name: 'NavbarBurger',
     props: {
         isOpened: {
@@ -22,5 +23,5 @@ export default {
             default: false
         }
     }
-}
+})
 </script>

@@ -199,6 +199,7 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import FormElementMixin from '../../utils/FormElementMixin'
 import { isMobile } from '../../utils/helpers'
 import config from '../../utils/config'
@@ -236,7 +237,7 @@ const defaultDateParser = (date, vm) => {
     return null
 }
 
-export default {
+export default defineComponent({
     name: 'BDatepicker',
     components: {
         [DatepickerTable.name]: DatepickerTable,
@@ -781,5 +782,5 @@ export default {
             document.removeEventListener('keyup', this.keyPress)
         }
     }
-}
+})
 </script>

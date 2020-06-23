@@ -36,9 +36,9 @@ const SnackbarProgrammatic = {
 }
 
 const Plugin = {
-    install(Vue) {
-        localVueInstance = Vue
-        registerComponentProgrammatic(Vue, 'snackbar', SnackbarProgrammatic)
+    install(app) {
+        localVueInstance = app
+        registerComponentProgrammatic(app, 'snackbar', SnackbarProgrammatic)
     }
 }
 

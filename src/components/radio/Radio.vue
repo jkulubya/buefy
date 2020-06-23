@@ -21,10 +21,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import CheckRadioMixin from '../../utils/CheckRadioMixin.js'
 
-export default {
+export default defineComponent({
     name: 'BRadio',
     mixins: [CheckRadioMixin]
-}
+})
 </script>

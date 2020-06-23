@@ -32,10 +32,11 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import FormElementMixin from '../../utils/FormElementMixin'
 import { File } from '../../utils/ssr'
 
-export default {
+export default defineComponent({
     name: 'BUpload',
     mixins: [FormElementMixin],
     inheritAttrs: false,
@@ -182,5 +183,5 @@ export default {
             return valid
         }
     }
-}
+})
 </script>
